@@ -18,6 +18,10 @@ For starting nodemon on `src/index.js` run
   npm start
 ```
 
+For running tests run
+
+`npm test`, `npm run watch` or `npm run watchAll`
+
 ## Meta
 
 Distributed under the MIT license. See `LICENSE` for more information.

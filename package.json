@@ -4,7 +4,10 @@
   "description": "Minimal node.js enviroment",
   "main": "src/index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node src/index.js"
+    "start": "nodemon --exec babel-node src/index.js",
+    "test": "jest",
+    "watch": "jest --watch",
+    "watchAll": "jest --watchAll"
   },
   "keywords": [],
   "author": "",
@@ -14,9 +17,12 @@
     "@babel/node": "^7.5.5",
     "@babel/preset-env": "^7.5.5",
     "babel-cli": "^6.26.0",
+    "babel-jest": "^24.9.0",
     "eslint": "^6.1.0",
     "eslint-config-airbnb-base": "^14.0.0",
     "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jest": "^22.15.1",
+    "jest": "^24.9.0",
     "nodemon": "^1.19.1"
   }
 }
