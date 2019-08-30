@@ -1,10 +1,9 @@
 module.exports = {
   env: {
-    browser: true,
-    es6: true,
-    'jest/globals': true
+    node: true,
+    es6: true
   },
-  extends: ['airbnb-base', 'plugin:jest/recommended'],
+  extends: ['eslint:recommended', 'google'],
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly'
@@ -13,6 +12,19 @@ module.exports = {
     ecmaVersion: 2018,
     sourceType: 'module'
   },
+  plugins: [],
   rules: {},
-  plugins: ['jest']
+  overrides: [
+    {
+      files: ['**/*.test.js', '**/*.spec.js', 'test/**/*.js'],
+      env: {
+        mocha: true
+      },
+      plugins: ['mocha'],
+      rules: {
+        'mocha/no-exclusive-tests': 'error',
+        'mocha/no-pending-tests': 'error'
+      }
+    }
+  ]
 };
