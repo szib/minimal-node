@@ -1,18 +1,22 @@
 module.exports = {
+  root: true,
   env: {
-    browser: true,
+    node: true,
     es6: true,
-    'jest/globals': true
+    jest: true,
   },
-  extends: ['airbnb-base', 'plugin:jest/recommended'],
+  extends: ['google', 'plugin:jest/recommended', 'prettier'],
+  plugins: ['jest', 'prettier'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  rules: {},
-  plugins: ['jest']
+  rules: {
+    'require-jsdoc': 'off',
+    'prettier/prettier': ['error'],
+  },
 };

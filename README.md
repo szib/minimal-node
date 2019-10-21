@@ -1,6 +1,6 @@
 # Minimal Node environment
 
-> Minimal Node environment with Babel, Eslint, Nodemon
+Minimal Node environment with Babel, Jest, Eslint, Nodemon
 
 ## Installation
 
@@ -12,15 +12,41 @@ Clone the repo then run
 
 ## Usage example
 
-For starting nodemon on `src/index.js` run
+For starting nodemon on `src/app.js` run
 
-```sh
+```
   npm start
 ```
 
-For running tests run
+## Run tests
 
-`npm test`, `npm run watch` or `npm run watchAll`
+```
+npm run test
+// or
+npm run test:watch
+```
+
+## Linting
+
+```
+npm run lint
+// or
+npm run lint:fix
+```
+
+## Build
+
+```
+// build to 'build' folder
+npm run build
+```
+
+## Build binary
+
+```
+// build binary into 'bin' folder
+npm run build:bin
+```
 
 ## Meta
 
