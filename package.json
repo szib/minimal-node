@@ -9,8 +9,8 @@
     "start": "nodemon --exec babel-node ./src/app.js",
     "build": "babel src --out-dir ./build --source-maps",
     "build:bin": "npm run clean:build && node ./scripts/build.js",
-    "lint": "eslint ./src/**/*.js ./__tests__/**/*.js",
-    "lint:fix": "eslint --fix ./src/**/*.js ./__tests__/**/*.js",
+    "lint": "eslint --config ./.eslintrc.js --ext .js ./src",
+    "lint:fix": "eslint --config ./.eslintrc.js --fix --ext .js ./src",
     "test": "jest --coverage",
     "test:watch": "jest --watch"
   },
