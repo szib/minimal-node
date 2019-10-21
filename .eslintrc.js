@@ -1,30 +1,21 @@
 module.exports = {
   env: {
     node: true,
-    es6: true
+    es6: true,
+    jest: true,
   },
-  extends: ['eslint:recommended', 'google'],
+  extends: ['google', 'plugin:jest/recommended', 'prettier'],
+  plugins: ['jest', 'prettier'],
   globals: {
     Atomics: 'readonly',
-    SharedArrayBuffer: 'readonly'
+    SharedArrayBuffer: 'readonly',
   },
   parserOptions: {
     ecmaVersion: 2018,
-    sourceType: 'module'
+    sourceType: 'module',
   },
-  plugins: [],
-  rules: {},
-  overrides: [
-    {
-      files: ['**/*.test.js', '**/*.spec.js', 'test/**/*.js'],
-      env: {
-        mocha: true
-      },
-      plugins: ['mocha'],
-      rules: {
-        'mocha/no-exclusive-tests': 'error',
-        'mocha/no-pending-tests': 'error'
-      }
-    }
-  ]
+  rules: {
+    'require-jsdoc': 'off',
+    'prettier/prettier': ['error'],
+  },
 };
